@@ -9,6 +9,7 @@
 | 技能 | 说明 | 状态 |
 |---|---|---|
 | [pdf-watermark-remover](./pdf-watermark-remover/) | 去除 PDF 文件中的平铺图案水印和半透明文字水印 | 稳定 |
+| [claude-code-skills](https://github.com/yuanqi99/claude-code-skills) | 专门针对 Claude Code 的记忆和集成技能集合 | 持续更新 |
 
 ## 快速开始
 

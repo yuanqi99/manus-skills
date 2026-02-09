@@ -9,6 +9,7 @@ A collection of reusable AI agent skills and standalone CLI tools. Each skill is
 | Skill | Description | Status |
 |---|---|---|
 | [pdf-watermark-remover](./pdf-watermark-remover/) | Remove tiling-pattern and semi-transparent text watermarks from PDF files | Stable |
+| [claude-code-skills](https://github.com/yuanqi99/claude-code-skills) | A collection of memory and integration skills specifically for Claude Code | Active |
 
 ## Quick Start
 
