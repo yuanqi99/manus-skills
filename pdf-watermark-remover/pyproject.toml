@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pdf-watermark-remover"
+version = "1.0.0"
+description = "Remove tiling-pattern and semi-transparent text watermarks from PDF files."
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+authors = [
+    {name = "ShanJu", email = "yuanqi99@users.noreply.github.com"},
+]
+keywords = ["pdf", "watermark", "remover", "pymupdf"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Utilities",
+]
+dependencies = [
+    "pymupdf>=1.23.0",
+]
+
+[project.scripts]
+pdf-watermark-remover = "pdf_watermark_remover.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/yuanqi99/manus-skills/tree/main/pdf-watermark-remover"
+Repository = "https://github.com/yuanqi99/manus-skills"
+Issues = "https://github.com/yuanqi99/manus-skills/issues"
