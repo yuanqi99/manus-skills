@@ -1,12 +1,14 @@
 # Manus Skills
 
-A collection of reusable AI agent skills and standalone CLI tools. Each skill is designed to work with **Manus**, and also ships as an independent Python CLI tool that runs in any environment — **Claude Code**, **Qodo**, **Cursor**, **Windsurf**, or plain terminal.
+[中文说明](./README_CN.md) | English
+
+A collection of reusable AI agent skills and standalone CLI tools. Each skill is designed to work seamlessly with **Manus**, and also ships as an independent Python CLI tool that runs in any environment — **Claude Code**, **Qodo**, **Cursor**, **Windsurf**, or plain terminal.
 
 ## Skills
 
-| Skill | Description | Install |
+| Skill | Description | Status |
 |---|---|---|
-| [pdf-watermark-remover](./pdf-watermark-remover/) | Remove tiling-pattern and semi-transparent text watermarks from PDF files | `pip install pymupdf` |
+| [pdf-watermark-remover](./pdf-watermark-remover/) | Remove tiling-pattern and semi-transparent text watermarks from PDF files | Stable |
 
 ## Quick Start
 
@@ -15,40 +17,58 @@ A collection of reusable AI agent skills and standalone CLI tools. Each skill is
 git clone https://github.com/yuanqi99/manus-skills.git
 cd manus-skills
 
-# Use any skill directly
+# Use any skill — example: PDF Watermark Remover
 cd pdf-watermark-remover
 pip install -e .
 pdf-watermark-remover input.pdf output.pdf
 ```
 
-## Usage in AI Coding Tools
+## Multi-Environment Support
+
+Every skill in this repo is designed to be **universal** — use it wherever you work.
 
 ### Claude Code / Qodo / Cursor / Windsurf
 
-Each skill can be used as a standalone CLI tool. Just clone this repo into your project and run:
+Clone the repo into your workspace and use any skill as a CLI tool:
 
 ```bash
-# Direct script execution (no install needed)
-python pdf-watermark-remover/pdf_watermark_remover/cli.py input.pdf output.pdf
-
-# Or install as CLI tool
-cd pdf-watermark-remover && pip install -e .
+git clone https://github.com/yuanqi99/manus-skills.git
+cd manus-skills/pdf-watermark-remover
+pip install -e .
 pdf-watermark-remover input.pdf output.pdf
+```
+
+Or run the script directly without installation:
+
+```bash
+python pdf-watermark-remover/pdf_watermark_remover/cli.py input.pdf output.pdf
 ```
 
 ### Manus Platform
 
-Skills are automatically detected when placed in `/home/ubuntu/skills/`. Copy the skill directory:
+Skills are automatically detected when placed in `/home/ubuntu/skills/`. Simply copy:
 
 ```bash
 cp -r pdf-watermark-remover /home/ubuntu/skills/pdf-watermark-remover
+```
+
+### Any Terminal / CI Pipeline
+
+Install as a standard Python package:
+
+```bash
+cd pdf-watermark-remover && pip install .
+pdf-watermark-remover input.pdf output.pdf
 ```
 
 ## Project Structure
 
 ```
 manus-skills/
-├── README.md                          # This file
+├── README.md                          # English README
+├── README_CN.md                       # 中文 README
+├── LICENSE                            # MIT License
+├── .gitignore
 ├── pdf-watermark-remover/             # Skill: PDF Watermark Remover
 │   ├── README.md                      # Skill documentation
 │   ├── SKILL.md                       # Manus skill metadata
@@ -73,4 +93,4 @@ To add a new skill:
 
 ## License
 
-MIT License
+[MIT License](./LICENSE)
